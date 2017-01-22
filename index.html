@@ -1,0 +1,40 @@
+<html>
+
+<head>
+  <title>Weather - Angular 2 Demo</title>
+  <meta charset="UTF-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/spacelab/bootstrap.min.css" rel="stylesheet" integrity="sha384-L/tgI3wSsbb3f/nW9V6Yqlaw3Gj7mpE56LWrhew/c8MIhAYWZ/FNirA64AVkB5pI"
+    crossorigin="anonymous">
+    
+  <!-- Polyfill(s) for older browsers -->
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+  <script src="systemjs.config.js"></script>
+    
+  <script>
+      //just use angular2-google-map
+      // window.navigator.geolocation.getCurrentPosition(function(pos){
+      //console.log(pos);
+      //you can use google api to look up location or use the lat and long in the weather API directly for the initial call
+      //'http://maps.googleapis.com/maps/api/geocode/json?latlng='+pos.coords.latitude+','+pos.coords.longitude+'&sensor=true'
+     // });
+  //  })
+
+      System.import('app').catch(function(err){ console.error(err); });
+
+    </script>
+</head>
+
+<body>
+  <my-app>Loading app...</my-app>
+
+</body>
+
+</html>
