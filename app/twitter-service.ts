@@ -50,20 +50,11 @@ function parseTweet(r: any) {
         screenname: r.user.screen_name
     });
 
-
-
     let e = r.entities;
    // printkeys(e);
 
-
-    for (var k in e) {
-        //why does the e.k not work for value?
-        console.log("Key is " + k + ", value is" + e[k]);
-    }
-
-    if (e && e.media ) {
-        console.log('have media');
-        let m = e['media'][0];
+    if (e && e.media && e.media[0].type == 'photo') {
+        let m = e.media[0];
         tweet.profile_image_url = m.profile_image_url;
         tweet.follower_count = m.follower_count;
         tweet.url = m.url;

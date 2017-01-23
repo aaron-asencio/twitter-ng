@@ -12,12 +12,10 @@
       <ul>
         <li *ngFor="let tweet of tweets">
           <div><span class="tweet-account">{{tweet.name}}</span> <small>{{ tweet.created_at }}</small></div>
-          <div>{{tweet.expanded_url}}</div>
-          <div>{{tweet.media_url}}</div>
-          <div>{{tweet.media_url_https}}</div>
+         
           <div> {{ tweet.text }}</div>
           <div *ngIf="tweet.media_url_https">
-              <h3>{{tweet.media_url_https}}</h3>
+              <h5>{{tweet.media_url_https}}</h5>
               <img src="{{tweet.media_url_https}}" alt="">
           </div>
           
