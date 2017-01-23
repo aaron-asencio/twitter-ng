@@ -1,19 +1,19 @@
 import { Routes, RouterModule } from '@angular/router';
-import { WeatherComponent } from './weather.component';
+import { TwitterComponent } from './twitter.component';
 
 import { AppComponent } from './app.component';
 
 // Route config let's you map routes to components
 const routes: Routes = [
-  // map '/weather' to the weather component
+ 
   {
-    path: 'weather',
-    component: WeatherComponent,
+    path: 'tweets',
+    component: TwitterComponent,
   },
-  // map '/' to '/weather' as our default route
+  // map '/' to '/tweets' as our default route
   {
     path: '',
-    redirectTo: '/weather',
+    redirectTo: '/tweets',
     pathMatch: 'full'
   },
 ];

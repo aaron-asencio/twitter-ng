@@ -1,0 +1,29 @@
+<section>
+
+  <div class="col-lg-6">
+    <div class="jumbotron">
+      <h2>Tweets</h2>
+    </div>
+    <div *ngIf="errorMessage" class="alert alert-dismissible alert-danger">
+      {{ errorMessage }}
+    </div>
+    <div class="row" *ngIf="tweets">
+
+      <ul>
+        <li *ngFor="let tweet of tweets">
+          <div><span class="tweet-account">{{tweet.name}}</span> <small>{{ tweet.created_at }}</small></div>
+          <div>{{tweet.expanded_url}}</div>
+          <div>{{tweet.media_url}}</div>
+          <div>{{tweet.media_url_https}}</div>
+          <div> {{ tweet.text }}</div>
+          <div *ngIf="tweet.media_url_https">
+              <h3>{{tweet.media_url_https}}</h3>
+              <img src="{{tweet.media_url_https}}" alt="">
+          </div>
+          
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</section>
